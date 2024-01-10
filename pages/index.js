@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <p>キャッシュが効いてるか確認のためあえて変更を加えてみる</p>
+        <p>キャッシュが効いてるか確認のためあえて変更を加えてみる_part2</p>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>

@@ -73,5 +73,5 @@ jobs:
         with:
           app-name: 'workledger-proto-win'
           slot-name: 'github-test-by-plain-nextjs'
-          package: release.zip
+          package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_68DC4670C36441A7B925AF086CE9F468 }}

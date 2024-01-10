@@ -63,6 +63,9 @@ jobs:
           
       - name: unzip artifact for deployment
         run: 7z x release.zip
+
+      - name: delete artifact
+        run: del release.zip
       
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2

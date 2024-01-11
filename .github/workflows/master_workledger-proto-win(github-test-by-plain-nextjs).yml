@@ -40,7 +40,7 @@ jobs:
           npm run build
 
       - name: delete next/cache
-        run: del .\.next\cache
+        run: rmdir /s .\.next\cache
 
       - name: Zip artifact for deployment
         run: Compress-Archive -Path .\* -DestinationPath .\release.zip

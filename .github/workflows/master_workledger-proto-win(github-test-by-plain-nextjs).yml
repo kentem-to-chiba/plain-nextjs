@@ -34,10 +34,13 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
 
-      - name: npm install, build, and test
+      - name: npm install, build
         run: |
           npm ci
           npm run build
+
+      - name: delete next/cache
+        run: del .next\cache
 
       - name: Zip artifact for deployment
         run: Compress-Archive -Path .\* -DestinationPath .\release.zip

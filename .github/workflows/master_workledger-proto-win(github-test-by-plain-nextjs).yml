@@ -74,4 +74,4 @@ jobs:
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_68DC4670C36441A7B925AF086CE9F468 }}
           
       - name: remove artifact
-        run: rm release.zip
+        run: rm .next_zip.zip

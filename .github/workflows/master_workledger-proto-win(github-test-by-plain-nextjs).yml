@@ -60,12 +60,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: node-app
-          
-      - name: unzip artifact for deployment
-        run: 7z x release.zip
-
-      - name: remove artifact
-        run: rm release.zip
       
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
@@ -75,3 +69,6 @@ jobs:
           slot-name: 'github-test-by-plain-nextjs'
           package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_68DC4670C36441A7B925AF086CE9F468 }}
+          
+      - name: remove artifact
+        run: rm release.zip

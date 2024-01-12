@@ -43,8 +43,8 @@ jobs:
         run: Remove-Item -Path .next\cache -Recurse -Force
 
       - name: Zip artifact for deployment
-        run: Compress-Archive -Path .\.next -DestinationPath .\.next_zip.zip
-      
+        run: Compress-Archive -Path .\.next,.\server.js,.\web.config -DestinationPath .\.next_zip.zip
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:

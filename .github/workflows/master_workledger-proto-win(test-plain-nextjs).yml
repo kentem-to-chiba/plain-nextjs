@@ -36,7 +36,7 @@ jobs:
 
       - name: npm install, build
         run: |
-          npm ci
+          npm ci --omit=dev
           npm run build
 
       - name: delete next/cache

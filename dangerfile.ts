@@ -5,7 +5,7 @@ message('hello! danger!')
 const hasModifiedPackageJson =
   danger.git.modified_files.includes('package.json' )
 const hasModifiedPackageLockJson =
-  danger.git.modified_files.includes('package.json' )
+  danger.git.modified_files.includes('package-lock.json' )
 // package.jsonに修正があるが、package-lock.jsonにない
 if (hasModifiedPackageJson && !hasModifiedPackageLockJson)
   warn(

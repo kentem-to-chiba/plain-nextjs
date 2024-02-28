@@ -1,4 +1,6 @@
-import { danger, warn } from 'danger'
+import { danger, warn,message } from 'danger'
+
+message('hello! danger!')
 
 const hasModifiedPackageJson =
   danger.git.modified_files.includes('package.json' )
